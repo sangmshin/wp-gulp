@@ -1,0 +1,68 @@
+//----------------------------------*\
+// Breakpoints
+//----------------------------------*/
+
+$breakpoints: (
+  phone: (max-width: 699px),
+  tabletPortrait: (min-width: 700px),
+  tabletLandscape: (min-width: 900px),
+  desktop: (min-width: 1200px),
+  widescreen: (min-width: 1800px)
+);
+
+//----------------------------------*\
+// Colors
+//----------------------------------*/
+
+// Neutrals
+$white: #fff;
+$black: #000;
+$slate: #4A4A4A;
+$greyLight3: #EBEEEE;
+$greyLight2: #FBFBFB;
+$greyLight: #f4f4f4;
+$greyMed: #dee1e0;
+$greyDark: #8d9ca9;
+
+
+// Blues
+$blueLight: #B5E0EF;
+$blueMed: #4DB4DA;
+$bluePale: #91B4C0;
+$blueDark: #3C8CAA;
+
+$bergBlue: #02a3d5;
+$lightCharc: #394859;
+$darkCharc: #0c2a31;
+
+// MyMembership colors
+$color-1: #01B7CF;
+$color-2: #F08517;
+$color-3: #43BAC2;
+$color-4: #D7B289;
+$color-5: #004F6D;
+$color-6: #7ED321;
+$color-7: #5091E3;
+$color-8: #F4837C;
+$color-9: #82F5C4;
+$color-10: #5867FF;
+$color-11: #CC18B7;
+
+/* 
+CIRCLE 1. #01B7CF
+CIRCLE 2. #F08517
+CIRCLE 3. #43BAC2
+CIRCLE 4. #D7B289
+CIRCLE 5. #004F6D
+CIRCLE 6. #7ED321
+CIRCLE 7. #5091E3
+CIRCLE 8. #F4837C
+*/
+
+
+//----------------------------------*\
+// Fonts
+//----------------------------------*/
+$simplonNormReg: 'SimplonNorm-Regular', Arial, Helvetica Neue, Helvetica, sans-serif;
+$simplonNormLight: 'SimplonNorm-Light', Arial, Helvetica Neue, Helvetica, sans-serif;
+$simplonNormBold: 'SimplonNorm-Bold', Arial, Helvetica Neue, Helvetica, sans-serif;

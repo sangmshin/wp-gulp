@@ -1,0 +1,158 @@
+.circle {
+	position: absolute;
+	z-index: 1;
+	
+	&.circle--xtraLg {
+
+		@include bp(phone) {
+			display: none;
+		}		
+
+		@include bp(tabletPortrait) {
+			width: 243px;
+			height: 243px;
+			right: -150px;
+			bottom: -158px;
+			z-index: 1;
+		}
+
+		@include bp(tabletLandscape) {
+			right: -125px;
+		}
+
+		@include bp(desktop) {
+			width: 316px;
+			height: 316px;
+			right: -90px;
+			bottom: -158px;			
+		}
+
+		@include bp(widescreen) {
+			right: -30px;
+		}
+	}
+
+	&.circle--lg {
+		width: 76px;
+		height: 76px;
+
+		@include bp(phone) {
+			top: -25px;
+			left: -45px
+		}
+
+		@include bp(tabletPortrait) {
+			width: 260px;
+			height: 260px;
+			left: -90px;
+
+			top: -50px;
+			z-index: 1;
+		}
+
+		@include bp(desktop) {
+			width: 268px;
+			height: 268px;
+			left: 0;
+		}
+	}
+
+	&.circle--med {
+
+		@include bp(phone) {
+			display: none;
+		}		
+
+		@include bp(tabletPortrait) {
+			width: 90px;
+			height: 90px;
+			bottom: -170px;
+		}
+
+		@include bp(desktop) {
+			width: 202px;
+			height: 202px;
+			bottom: -249px;			
+		}
+	}
+
+	&.circle--sm {
+
+		@include bp(phone) {
+			top: -45px;
+			right: -110px;
+		}
+
+		@include bp(tabletPortrait) {
+			top: -110px;
+			right: -70px;
+			width: 102px;
+			height: 102px;
+		}
+
+		@include bp(desktop) {
+			top: -55px;
+			right: -140px;
+			width: 117px;
+			height: 117px;
+		}
+
+		@include bp(widescreen) {
+			right: 0;
+		}
+	}
+
+	&.circle--xtraSm {
+
+		@include bp(phone) {
+			display: none;
+		}		
+ 
+		@include bp(tabletPortrait) {
+			width: 60px;
+			height: 60px;
+			top: -100px;
+			right: 0;
+		}
+
+		@include bp(desktop) {
+			width: 92px;
+			height: 92px;
+			right: -200px;
+			top: 0;
+		}
+
+		@include bp(widescreen) {
+			right: 0;
+		}
+	}
+
+	&.circle--smallest {
+		width: 47px;
+		height: 47px;
+
+		@include bp(phone) {
+			display: none;
+		}
+
+		@include bp(tabletPortrait) {
+			top: 350px;
+			left: 0;
+		}
+
+		@include bp(desktop) {
+			top: 450px;
+			left: -25px;			
+		}
+	}
+
+	&.circle--footer {
+		top: -83px;
+		right: 0;
+
+		@include bp(tabletPortrait) {
+			right: 0;
+			top: -133px;
+		}
+	}
+}

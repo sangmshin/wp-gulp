@@ -1,0 +1,57 @@
+//----------------------------------*\
+// Aspect ratio
+//----------------------------------*/
+@mixin aspectRatio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }  
+}
+
+//----------------------------------*\
+// Breakpoints
+//----------------------------------*/
+@mixin bp($name) {
+  $value: map-get($breakpoints, $name);
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "The '#{$name}' breakpoint is not defined. "
+        + "Please make sure it is defined in the global.scss '$breakpoint' map.";
+  }
+}
+
+//----------------------------------*\
+// Get sprite
+//----------------------------------*/
+@mixin getSprite($pos-x, $pos-y) {
+  $sprite-image: url('../img/sprite.svg');
+  $sprite-position: $pos-x $pos-y;
+  
+  // Returns background
+  background: $sprite-image no-repeat $sprite-position;
+  
+}
+
+//----------------------------------*\
+// Background colors
+//----------------------------------*/
+@mixin colorBg($color) {
+  background-color: $color;
+  color: #fff;
+}

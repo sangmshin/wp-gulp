@@ -1,0 +1,123 @@
+.nav {
+	background-color: $greyLight;
+	padding: 15px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 700;
+
+	@include bp(tabletPortrait) {
+		padding: 30px 0;
+	}
+
+	.nav__logo {
+		margin-top: 0;
+
+		@include bp(tabletPortrait) {
+			margin-top: 29px;
+		}
+	}
+
+	.nav__pages {
+		display: none;
+		position: absolute;
+		right: 0;
+		vertical-align: top;
+
+		@include bp(tabletPortrait) {
+			display: inline-block;
+		}
+
+		.nav__page-link {
+			color: $slate;
+
+			&:hover {
+
+				.nav__page-title {
+					color: $bergBlue;
+				}
+			}
+		}
+
+		.nav__page-title {
+			display: inline-block;
+			padding: 0 20px;
+			vertical-align: top;
+			list-style-type: none;
+			font-size: 25px;
+			text-transform: lowercase;
+		}
+	}
+
+	.nav__nav-mobile {
+		position: fixed;
+		top: 92px;
+		left: 0;
+		display: none;
+		width: 100%;
+		height: 100%;
+		padding-bottom: 35%;
+		background-color: $greyLight;
+		z-index: 500;
+		overflow: scroll;
+
+		.nav__pages {
+			position: static;
+			display: block;
+			padding: 0;
+
+			.nav__page-title {
+				display: block;
+				padding: 15px 0;
+				text-indent: 30px;
+			}
+		}
+	}
+
+	.nav__hamburger {
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 30px;
+		height: 24px;
+
+		@include bp(tabletPortrait) {
+			display: none;
+		}
+
+		.icon--close {
+			display: none;
+		}
+
+		&.nav__hamburger--active {
+
+			.icon--hamburger {
+				display: none;
+			}
+
+			.icon--close {
+				display: block;
+			}
+		}
+	}
+}
+
+// Secondary resources nav
+.nav__resources {
+	position: fixed;
+	top: 117px;
+	width: 100%;
+	padding: 8px 0;
+	background-color: $greyLight3;
+	z-index: 8;
+
+	@include bp(phone) {
+		display: none !important;
+	}
+
+	@include bp(desktop) {
+		top: 121px;
+	}
+}

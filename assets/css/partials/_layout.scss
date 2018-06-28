@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $white;
+	color: $slate;
+}
+
+.content {
+	overflow: hidden;
+	padding-top: 117px;
+	
+	@include bp(phone) {
+		padding-top: 93px;
+	}
+
+	@include bp(desktop) {
+		padding-top: 121px;
+	}
+}
+
+// Section
+.section {
+	position: relative;
+	width: 100%;
+	padding: 50px 0;
+
+	@include bp(phone) {
+	}
+
+	@include bp(tabletPortrait) {
+		padding: 125px 0;
+	}
+
+	@include bp(desktop) {
+		padding: 150px 0;
+	}
+
+	&.section--light-grey-2 {
+		background-color: $greyLight2;
+	}
+
+	&.section--light-grey {
+		background-color: $greyLight;
+	}
+
+	&.section--med-grey {
+		background-color: $greyMed;
+	}	
+
+	&.section--no-bottom-padding {
+		padding-bottom: 0;
+	}
+}
+
+// Width limit wrapper
+.limit {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+
+	@include bp(tabletPortrait) {
+		width: 90%;
+		display: flex;
+	}
+
+	@include bp(desktop) {
+		width: 940px;
+	}
+
+	@include bp(widescreen) {
+		width: 1270px;
+	}
+
+	&.limit--fullMobile {
+		
+		@include bp(phone) {
+			width: 100%;
+		}
+	}
+}
+
+// Columns
+.col-half {
+	align-self: center;
+	width: 50%;
+
+	@include bp(phone) {
+		display: block;
+		width: 100%;
+	}
+}
+
+.section__col-left {
+	width: 100%;
+	display: block;
+	float: none;
+
+	@include bp(tabletPortrait) {
+		width: 33%;
+		padding-right: 15px;
+		float: left;
+	}
+
+	@include bp(desktop) {
+		width: 33%;
+		padding-right: 25px;		
+	}
+}
+
+.section__col-right {
+	width: 100%;
+	display: block;
+	float: none;
+
+	@include bp(tabletPortrait) {
+		width: 90%;
+		max-width: 530px;
+		float: right;
+	}	
+
+	@include bp(desktop) {
+		width: 75%;
+		max-width: 100%;
+	}
+
+	@include bp(widescreen) {
+		width: 50%;
+	}
+}
+
+.clear-both {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+}
